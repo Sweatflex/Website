@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --base-color: white;
+    --input-box-color: #eeeeee;
+    --text-color-dark: black;
+    --text-color-light: white;
+    --error-color: #f06272;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Cabin, Segoe UI, sans-serif;
+    font-size: 12pt;
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to top, #333366, #8888ff);
+    background-attachment: fixed;
+}
+
+.wrapper {
+    background: var(--base-color);
+    width: 420px;
+    border-radius: 10px;
+}
+
+.wrapper h1 {
+    font-size: 46px;
+    margin: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: stretch;
+    margin: 20px 20px 0px 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+label {
+    flex-shrink: 0;
+    width: 50px;
+    background-color: #0055bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label svg {
+    fill: white;
+}
+
+.input-wrapper.error label {
+    background-color: var(--error-color);
+}
+
+.input-wrapper.error .input-box {
+    border-color: var(--error-color);
+}
+
+.wrapper .input-box {
+    position: relative;
+    padding: 12px;
+    width: 80%;
+    height: 20px;
+    margin: 20  px 0;
+    background: var(--input-box-color);
+    border: 1px solid var(--input-box-color);
+    border-radius: 0px 5px 5px 0px;
+    font-size: large;
+    transition: 150ms ease;
+}
+
+.input-box:hover {
+    border: 1px solid black;
+}
+
+form .input-box:focus {
+    outline: none;
+    border-color: var(--text-color-dark);
+}
+
+div:has(input:focus):not(.error) > label {
+    background-color: var(--text-color-dark);
+}
+
+.wrapper .signup {
+    position: relative;
+    padding: 12px;
+    width: 90%;
+    height: 45px;
+    margin-top: 20px;
+    background: #2277dd;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: large;
+    color: white;
+}
+
+.wrapper .signup:hover {
+    background-color: #0055bb;
+    cursor: pointer;
+}
+
+.wrapper .signup:active {
+    background-color: #003399;
+}
+
+.wrapper .login {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: var(--error-color);
+}

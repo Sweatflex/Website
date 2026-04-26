@@ -1,0 +1,20 @@
+services:
+
+  nginx:
+    image: nginx:latest         # pulled straight from Docker Hub, no Dockerfile needed
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - backend
+    restart: unless-stopped
+    container_name: nginx
+
+  backend:
+    build: ./backend            # points to the folder with your Dockerfile
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    container_name: fastapi 
