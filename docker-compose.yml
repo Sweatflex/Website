@@ -18,3 +18,10 @@ services:
       - "8000:8000"
     restart: unless-stopped
     container_name: fastapi 
+  
+  autopull:
+    build: ./autopull            # points to the folder with your Dockerfile
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+    container_name: autopull 
