@@ -20,6 +20,8 @@ services:
     container_name: fastapi 
   
   autopull:
+    env_file:
+      - .env
     build: ./autopull            # points to the folder with your Dockerfile
     ports:
       - "8888:8888"
