@@ -1,10 +1,11 @@
 from fastapi import FastAPI, Request, HTTPException
 import hmac
 import hashlib
+import os
 
 app = FastAPI()
 
-WEBHOOK_SECRET = "your_secret_here"
+WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET")
 
 @app.post("/webhook")
 async def github_webhook(request: Request):
