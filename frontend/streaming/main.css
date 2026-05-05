@@ -49,3 +49,12 @@ header .nav-right .search svg{
     height: 40px;
     fill: white;
 }
+
+.recomended .card-holder {
+  display: flex;
+  gap: 40px;
+}
+
+.recomended .card-holder .card img {
+  border-radius: 40px;
+}
