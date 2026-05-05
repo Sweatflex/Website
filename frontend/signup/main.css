@@ -133,3 +133,20 @@ a:hover {
 .error {
     color: var(--error-color);
 }
+.goback{
+    position: relative;
+    padding: 12px;
+    width: 90%;
+    height: 45px;
+    margin-top: 1px;
+    background: #2277dd;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: large;
+    color: white;
+}
+.goback:hover {
+    background-color: #0055bb;
+    cursor: pointer;
+}

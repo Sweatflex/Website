@@ -10,6 +10,17 @@ body {
     background-color: white;
 }
 
+.header {
+   background-color: tomato;
+   height: 50px;
+   display: flex;
+   justify-content: left;
+}
+.buttonsellect{
+
+}
+
+
 /*Hero*/
 
 .hero {
