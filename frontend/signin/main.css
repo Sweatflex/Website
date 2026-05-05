@@ -127,3 +127,20 @@ a:hover {
     margin-bottom: 10px;
     font-size: medium;
 }
+.goback {
+    position: relative;
+    padding: 12px;
+    width: 90%;
+    height: 45px;
+    margin-top: 20px;
+    background: #2277dd;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: large;
+    color: white;
+}
+.goback:hover {
+    background-color: #0055bb;
+    cursor: pointer;
+}
